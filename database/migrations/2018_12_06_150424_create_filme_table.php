@@ -17,7 +17,6 @@ class CreateFilmeTable extends Migration
             $table->increments('id');
             $table->string('strtitulo' );
             $table->string('strdescricao' );
-            //$table->DateTime('dtapublicacao');
             $table->timestamps();
         });
     }

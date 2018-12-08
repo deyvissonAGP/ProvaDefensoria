@@ -9,7 +9,7 @@ class ComentarioController extends Controller
     public function index(){
     	$comentarios = Comentario::all();
     	$total = Comentario::all()->count();
-    	return view('list-comentarios', compact ('comentario', 'total'));
+    	return view('list-comentarios', compact ('comentarios', 'total'));
     }
 
     public function create(){
@@ -27,12 +27,7 @@ class ComentarioController extends Controller
     public function show($id){
     	//
     }
-
-    //public function edit($id){
-    //	$film = Filme::findOrFail($id);
-    //	return view('alter-filme', compact('film'));
-    //}
-
+    
     public function update(Request $request, $id){
     	$comment = Comentario::findOrFail($id);
     	$comment-> strcomentario = $request -> strcomentario;

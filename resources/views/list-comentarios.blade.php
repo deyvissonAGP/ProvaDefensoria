@@ -45,18 +45,6 @@
                             <span id="underline">Inicio</span>
                         </a>
                     </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" 
-                           href="#" style="text-decoration: none">
-                            <span class="glyphicon glyphicon-pencil"></span>
-                            <span id="underline">Cadastros</span> 
-                            <span class="caret"></span></a>
-                        <ul class="dropdown-menu">                           
-                            <li><a href="{{route('comment.index')}}">Comentarios</a></li>
-                            <li><a href="#">Usuários</a></li>                                                                                              
-                            <li><a href="#">Administradores</a></li>
-                        </ul>
-                    </li>
                     
                 </ul>
                 <ul class="nav navbar-nav navbar-right" id="link-white">
@@ -96,10 +84,7 @@
                             <li class="active">Comentarios</li>
                         </ol>
                         <br>
-                        <a href="{{route('comment.create')}}" 
-                           class="btn btn-default btn-sm pull-right">
-                            <span class="glyphicon glyphicon-plus"></span> Adicionar</a>
-                        
+                    
                             </form>
                         </div>
                     </div>           

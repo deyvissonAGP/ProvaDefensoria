@@ -42,18 +42,7 @@
                             <span id="underline">Inicio</span>
                         </a>
                     </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" 
-                           href="#" style="text-decoration: none">
-                            <span class="glyphicon glyphicon-pencil"></span>
-                            <span id="underline">Cadastros</span> 
-                            <span class="caret"></span></a>
-                        <ul class="dropdown-menu">                           
-                            <li><a href="{{route('film.index')}}">Filmes</a></li>
-                            <li><a href="#">Usuários</a></li>                                                                                              
-                            <li><a href="#">Administradores</a></li>
-                        </ul>
-                    </li>
+                    
                     <li class="dropdown">
                     </li>
                 </ul>
@@ -76,7 +65,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12" id="center">              
-                        <h1><b>Filmes</b></h1>
+                        <h1><b>Comentario</b></h1>
                         <br>
                     </div>
                 </div>
@@ -84,23 +73,23 @@
                     <div class="col-md-12">
                         <ol class="breadcrumb">
                             <li><a href="">Inicio</a></li>                  
-                            <li><a href="{{route('film.index')}}">Filmes</a></li>                  
+                            <li><a href="{{route('comment.index')}}">Comentarios</a></li>                  
                             <li class="active">Cadastro</li>
                         </ol>              
                     </div>          
                 </div>
                 <div class="row">  
                     <br>
-                    <h4 id="center"><b>CADASTRO DOS DADOS DO FILME</b></h4>
+                    <h4 id="center"><b>CADASTRO DOS DADOS DO COMENTARIO</b></h4>
                     <br> 
                     <form method="post" 
-                          action="{{route('film.store')}}" 
+                          action="{{route('comment.store')}}" 
                           enctype="multipart/form-data">
                         {{ csrf_field() }}
                         <div class="col-md-6">              
                             <div class="form-group">
-                                <label for="name">Titulo do Filme</label>
-                                <input type="text" name="strtitulo" 
+                                <label for="name">Comentario</label>
+                                <input type="text" name="strcomentario" 
                                        class="form-control" 
                                        required>
                             </div>
@@ -108,13 +97,23 @@
                        
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="description">Descrição do Filme</label>
-                                <input type="text" name="strdescricao" 
+                                <label for="description">Pontuação do Filme de 0 a 10</label>
+                                <input type="int" name="intpontuacao" 
                                        class="form-control" 
                                        required>
                             </div>
                         </div>
-                                  
+                              
+                        <div class="col-md-8">              
+                            <div class="form-group">
+                                <<label for="description">Titulo do filme</label>
+                                <input type="int" name="filme_id" 
+                                       class="form-control" 
+                                       required>
+
+                            </div>
+                        </div>
+
                         <div class="col-md-12">                   
                             <button type="reset" class="btn btn-default">
                                 Limpar

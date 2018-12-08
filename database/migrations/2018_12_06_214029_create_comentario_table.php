@@ -15,10 +15,9 @@ class CreateComentarioTable extends Migration
     {
         Schema::create('comentario', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('filme_id');
-
             $table->string('strcomentario');
             $table->integer('intpontuacao');
+            $table->unsignedInteger('filme_id');
             $table->timestamps();
         
             $table->foreign('filme_id')
