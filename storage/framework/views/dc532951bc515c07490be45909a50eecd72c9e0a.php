@@ -139,7 +139,7 @@
                                             &nbsp;<form style="display: inline-block;" method="POST" 
                                                         action="<?php echo e(route('filme.destroy', $filme->id)); ?>"
                                                         data-toggle="tooltip" data-placement="top"
-                                                        title="Excluir" 
+                                                        title="Excluir"
                                                         onsubmit="return confirm('Confirma exclusão?')">
                                                 <?php echo e(method_field('DELETE')); ?><?php echo e(csrf_field()); ?>                                                
                                                 <button type="submit" style="background-color: #fff">

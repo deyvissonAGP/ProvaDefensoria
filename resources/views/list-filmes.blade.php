@@ -138,7 +138,7 @@
                                             &nbsp;<form style="display: inline-block;" method="POST" 
                                                         action="{{route('filme.destroy', $filme->id)}}"
                                                         data-toggle="tooltip" data-placement="top"
-                                                        title="Excluir" 
+                                                        title="Excluir"
                                                         onsubmit="return confirm('Confirma exclusão?')">
                                                 {{method_field('DELETE')}}{{ csrf_field() }}                                                
                                                 <button type="submit" style="background-color: #fff">

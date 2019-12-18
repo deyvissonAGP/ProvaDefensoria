@@ -49,7 +49,7 @@
                             <span id="underline">Cadastros</span> 
                             <span class="caret"></span></a>
                         <ul class="dropdown-menu">                           
-                            <li><a href="{{route('film.index')}}">Filmes</a></li>
+                            <li><a href="{{route('filme.index')}}">Filmes</a></li>
                             <li><a href="#">Usuários</a></li>                                               
                             <li><a href="#">Administradores</a></li>
                         </ul>
@@ -86,7 +86,7 @@
                     <div class="col-md-12">
                         <ol class="breadcrumb">
                             <li><a href="">Inicio</a></li>                  
-                            <li><a href="{{route('film.index')}}">Filmes</a></li>                  
+                            <li><a href="{{route('filme.index')}}">Filmes</a></li>
                             <li class="active">Alteração</li>
                         </ol>              
                     </div>          
@@ -96,7 +96,7 @@
                     <h4 id="center"><b>ALTERAÇÃO DOS DADOS DO FILME</b></h4>
                     <br> 
                     <form method="post" 
-                          action="{{route('film.update', $film->id)}}" 
+                          action="{{route('filme.update', $filme->id)}}"
                           enctype="multipart/form-data">
                         {!! method_field('put') !!}
                         {{ csrf_field() }}
@@ -105,7 +105,7 @@
                                 <label for="strtitulo">Titulo do Filme</label>
                                 <input type="text" name="strtitulo" 
                                        class="form-control" 
-                                       value="{{isset($film->strtitulo)? $film->strtitulo : old('strtitulo')}}"
+                                       value="{{isset($filme->strtitulo)? $film->strtitulo : old('strtitulo')}}"
                                        required> 
 
                             </div>

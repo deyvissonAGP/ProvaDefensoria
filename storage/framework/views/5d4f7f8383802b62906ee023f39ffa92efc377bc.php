@@ -50,7 +50,7 @@
                             <span id="underline">Cadastros</span> 
                             <span class="caret"></span></a>
                         <ul class="dropdown-menu">                           
-                            <li><a href="<?php echo e(route('film.index')); ?>">Filmes</a></li>
+                            <li><a href="<?php echo e(route('filme.index')); ?>">Filmes</a></li>
                             <li><a href="#">Usuários</a></li>                                                                                              
                             <li><a href="#">Administradores</a></li>
                         </ul>
@@ -85,7 +85,7 @@
                     <div class="col-md-12">
                         <ol class="breadcrumb">
                             <li><a href="">Inicio</a></li>                  
-                            <li><a href="<?php echo e(route('film.index')); ?>">Filmes</a></li>                  
+                            <li><a href="<?php echo e(route('filme.index')); ?>">Filmes</a></li>
                             <li class="active">Cadastro</li>
                         </ol>              
                     </div>          
@@ -95,7 +95,7 @@
                     <h4 id="center"><b>CADASTRO DOS DADOS DO FILME</b></h4>
                     <br> 
                     <form method="post" 
-                          action="<?php echo e(route('film.store')); ?>" 
+                          action="<?php echo e(route('filme.store')); ?>"
                           enctype="multipart/form-data">
                         <?php echo e(csrf_field()); ?>
 
