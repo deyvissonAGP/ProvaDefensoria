@@ -52,7 +52,7 @@
                             <span id="underline">Cadastros</span> 
                             <span class="caret"></span></a>
                         <ul class="dropdown-menu">                           
-                            <li><a href="{{route('film.index')}}">Filmes</a></li>
+                            <li><a href="{{route('filme.index')}}">Filmes</a></li>
                             <li><a href="#">Usuários</a></li>                                                                                              
                             <li><a href="#">Administradores</a></li>
                         </ul>
@@ -96,7 +96,7 @@
                             <li class="active">Filmes</li>
                         </ol>
                         <br>
-                        <a href="{{route('film.create')}}" 
+                        <a href="{{route('filme.create')}}"
                            class="btn btn-default btn-sm pull-right">
                             <span class="glyphicon glyphicon-plus"></span> Adicionar</a>
                         
@@ -109,11 +109,12 @@
                         <br />
                         <h4 id="center"><b>FILMES CADASTRADOS ({{$total}})</b></h4>
                         <br>
+                        <div class="container">
                         <div class="table-responsive">
                             <table class="table table-hover">
                                 <thead>
                                     <tr>
-                                        <th id="center">Código</th>
+                                        <th id="center">#</th>
                                         <th>Titulo</th>
                                         <th>Descrição</th>
                                         <th>Data de Publicação</th>
@@ -130,12 +131,12 @@
                                         <td title="Data de publicacao">{{$filme->created_at}}</td>
                                         
                                         <td id="center">
-                                            <a href="{{route('film.edit', $filme->id)}}" 
+                                            <a href="{{route('filme.edit', $filme->id)}}"
                                                data-toggle="tooltip" 
                                                data-placement="top"
                                                title="Alterar"><i class="fa fa-pencil"></i></a>
                                             &nbsp;<form style="display: inline-block;" method="POST" 
-                                                        action="{{route('film.destroy', $filme->id)}}"                                                        
+                                                        action="{{route('filme.destroy', $filme->id)}}"
                                                         data-toggle="tooltip" data-placement="top"
                                                         title="Excluir" 
                                                         onsubmit="return confirm('Confirma exclusão?')">
@@ -147,6 +148,7 @@
                                     @endforeach
                                 </tbody>
                             </table>
+                        </div>
                         </div>
                     </div>
                 </div>

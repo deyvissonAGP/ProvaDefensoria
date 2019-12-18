@@ -80,20 +80,18 @@
                 <div class="row">
                     <div class="col-md-12">
                         <ol class="breadcrumb">
-                            <li><a href="#">Inicio</a></li>                  
+                            <li><a href="{{asset('home')}}">Inicio</a></li>
                             <li class="active">Comentarios</li>
-                        </ol>
-                        <br>
-                    
-                            </form>
-                        </div>
-                    </div>           
+                        </ol><br>
+                    </div>
                 </div>
+            </div>
                 <div class="row">
                     <div class="col-md-12">   
                         <br />
                         <h4 id="center"><b>Comentarios CADASTRADOS ({{$total}})</b></h4>
                         <br>
+                        <div class="container">
                         <div class="table-responsive">
                             <table class="table table-hover">
                                 <thead>
@@ -103,7 +101,6 @@
                                         <th>Descrição</th>
                                         <th>Data de Publicação</th>
                                         <th id="center">Ação</th>
-                                                       
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -115,23 +112,23 @@
                                         <td title="Data de publicacao">{{$comentario->created_at}}</td>
                                         
                                         <td id="center">
-                                            <a href="{{route('comment.edit', $comentario->id)}}" 
+                                            <a href="{{route('comentario.edit', $comentario->id)}}"
                                                data-toggle="tooltip" 
                                                data-placement="top"
                                                title="Alterar"><i class="fa fa-pencil"></i></a>
-                                            &nbsp;<form style="display: inline-block;" method="POST" 
-                                                        action="{{route('comment.destroy', $comment->id)}}"                                                        
-                                                        data-toggle="tooltip" data-placement="top"
-                                                        title="Excluir" 
-                                                        onsubmit="return confirm('Confirma exclusão?')">
-                                                {{method_field('DELETE')}}{{ csrf_field() }}                                                
-                                                <button type="submit" style="background-color: #fff">
-                                                    <a><i class="fa fa-trash-o"></i></a>                                                    
-                                                </button></form></td>               
+                                            &nbsp;<form style="display: inline-block;" method="POST"
+                                                            action="{{route('comentario.destroy', $comment->id)}}"
+                                                            data-toggle="tooltip" data-placement="top"
+                                                            title="Excluir"
+                                                            onsubmit="return confirm('Confirma exclusão?')">
+                                                    {{method_field('DELETE')}}{{ csrf_field() }}
+                                                    <button type="submit" style="background-color: #fff"><a><i class="fa fa-trash-o"></i></a></button>
+                                                </form></td>
                                     </tr>
                                     @endforeach
                                 </tbody>
                             </table>
+                        </div>
                         </div>
                     </div>
                 </div>

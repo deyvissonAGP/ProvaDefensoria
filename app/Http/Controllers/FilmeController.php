@@ -21,7 +21,7 @@ class FilmeController extends Controller
     	$film-> strtitulo = $request -> strtitulo;
     	$film-> strdescricao = $request -> strdescricao;
     	$film->save();
-    	return redirect()->route('film.index')->with('message', 'Filme Incluido com Sucesso !');
+    	return redirect()->route('filme.index')->with('message', 'Filme Incluido com Sucesso !');
     }
 
     public function show($id){
@@ -38,12 +38,12 @@ class FilmeController extends Controller
     	$film-> strtitulo = $request -> strtitulo;
     	$film-> strdescricao = $request -> strdescricao;
     	$film-> save();
-    	return redirect()->route('film.index')->with('message', 'Filme Atualizado com Sucesso !');
+    	return redirect()->route('filme.index')->with('message', 'Filme Atualizado com Sucesso !');
     }
 
     public function destroy($id){
     	$film = Filme::findOrFail($id);
     	$film->delete();
-    	return redirect()->route('film.index')->with('message','Filme excluido com sucesso');
+    	return redirect()->route('filme.index')->with('message','Filme excluido com sucesso');
     }
 }
